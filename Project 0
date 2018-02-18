@@ -1,0 +1,26 @@
+//Margarita Zias
+//CS212 Spring 2018 - Project 0
+//Lab Section: Mon/Wed 1:40PM
+import javax.swing.JOptionPane;
+
+public class project0 {
+	public static void main(String[]args) {
+        String inputWord; //to allow user to input sentences
+        int E, e; //letters to check for
+        while (true) {
+        	inputWord = JOptionPane.showInputDialog(null,"Plese enter a "+ "sentence: Enter \"STOP\" to exit"); // user begins entering
+        	
+        if (inputWord.equalsIgnoreCase("STOP") ){ //If user enters STOP
+                System.exit(0);//end input asking for sentences
+            }
+        
+        E = inputWord.length() - inputWord.replaceAll("E","").length();
+        e = inputWord.length() - inputWord.replaceAll("e","").length();
+        // this will count how many times either E or e appears in the input accordingly 
+	
+        JOptionPane.showMessageDialog(null," Number of lowercase e's : " + e + "\n" + " Number of upperrcase e's : " + E );
+        // result will be printed 
+        }
+        
+	}
+}
